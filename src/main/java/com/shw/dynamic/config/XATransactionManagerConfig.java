@@ -11,12 +11,13 @@ import org.springframework.transaction.jta.JtaTransactionManager;
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
 
+
 /**
- * @Author : JCccc
- * @CreateTime : 2019/12/10
- * @Description :JTA 事务配置
- **/
- 
+ * @author shw
+ * @version 1.0
+ * @date 2020/9/12 13:02
+ * @description
+ */
 @Configuration
 @EnableTransactionManagement
 public class XATransactionManagerConfig {

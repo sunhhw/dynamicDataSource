@@ -4,6 +4,12 @@ import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author shw
+ * @version 1.0
+ * @date 2020/9/12 13:02
+ * @description
+ */
 @Configuration
 public class DruidProperties {
     @Value("${spring.datasource.druid.initialSize}")

@@ -3,7 +3,7 @@ package com.shw.dynamic.config;
 import com.shw.dynamic.enums.DataSourceType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.rmi.runtime.Log;
+
 
 /**
  * @author shw
