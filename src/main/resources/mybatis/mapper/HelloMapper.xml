@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shw.dynamic.mapper.HelloMapper">
+    <insert id="insertCatalog">
+INSERT INTO catalog(catalog_name) VALUES ('测试')
+    </insert>
+    <insert id="insertSchool">
+        INSERT INTO school(school_id,name,menu_id,state) VALUES (1,'漳卅',2,1);
+    </insert>
+
+
+    <select id="getCatalog" resultType="java.util.Map">
+           select * from catalog
+    </select>
+    <select id="getSchool" resultType="java.util.Map">
+        select * from school
+    </select>
+</mapper>

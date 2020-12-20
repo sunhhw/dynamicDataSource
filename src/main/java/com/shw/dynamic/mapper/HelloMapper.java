@@ -1,7 +1,8 @@
 package com.shw.dynamic.mapper;
 
+import com.shw.dynamic.annotation.MyDataSource;
+import com.shw.dynamic.enums.DataSourceType;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -12,21 +13,17 @@ import java.util.Map;
  * @date 2020/9/12 13:09
  * @description
  */
-@Mapper
+
 public interface HelloMapper {
 
-    /**
-     * 查询所有学校
-     * @return String字符串
-     */
-    @Select("select * from school")
-    List<Map> selectAllSchool();
+    @MyDataSource(DataSourceType.SLAVE)
+    List<Map> getCatalog();
 
-    /**
-     * fa
-     * @return String
-     */
-    @Select("select * from catalog ")
-    List<Map> selectAllCatalog();
+    List<Map> getSchool();
+
+    @MyDataSource(DataSourceType.SLAVE)
+    void insertCatalog();
+
+    void insertSchool();
 
 }
